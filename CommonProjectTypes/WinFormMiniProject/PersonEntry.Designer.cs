@@ -118,6 +118,7 @@
             this.addAddressBtn.TabIndex = 4;
             this.addAddressBtn.Text = "Add";
             this.addAddressBtn.UseVisualStyleBackColor = true;
+            this.addAddressBtn.Click += new System.EventHandler(this.addAddressBtn_Click);
             // 
             // saveBtn
             // 

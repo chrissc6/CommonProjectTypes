@@ -11,12 +11,11 @@ using WinFormMiniProjectLibrary;
 
 namespace WinFormMiniProject
 {
-    public partial class PersonEntry : Form
+    public partial class PersonEntry : Form, ISaveAddress
     {
+        BindingList<AddressModel> addresses = new BindingList<AddressModel>();
         public PersonEntry()
         {
-            BindingList<AddressModel> addresses = new BindingList<AddressModel>();
-
             InitializeComponent();
 
             //test address
@@ -24,6 +23,23 @@ namespace WinFormMiniProject
 
             addressesListBox.DataSource = addresses;
             addressesListBox.DisplayMember = nameof(AddressModel.AddressDisplayValue);
+        }
+
+        private void addAddressBtn_Click(object sender, EventArgs e)
+        {
+            AddressEntry entry = new AddressEntry(this);
+
+            entry.Show();
+        }
+
+        public void AddNewAddressComplete(AddressModel am)
+        {
+
+        }
+
+        public void SaveAddress(AddressModel address)
+        {
+            addresses.Add(address);
         }
     }
 }
