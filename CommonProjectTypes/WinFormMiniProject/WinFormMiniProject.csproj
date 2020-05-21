@@ -79,5 +79,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WinFormMiniProjectLibrary\WinFormMiniProjectLibrary.csproj">
+      <Project>{4B398C6F-4F9D-4317-B73D-880AA3C7C8D7}</Project>
+      <Name>WinFormMiniProjectLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
