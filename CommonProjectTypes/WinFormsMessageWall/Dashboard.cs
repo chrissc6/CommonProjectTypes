@@ -12,9 +12,25 @@ namespace WinFormsMessageWall
 {
     public partial class Dashboard : Form
     {
+        BindingList<string> msgs = new BindingList<string>();
+
         public Dashboard()
         {
             InitializeComponent();
+
+            WireUpLists();
+        }
+
+        private void WireUpLists()
+        {
+            messageListBox.DataSource = msgs;
+        }
+
+        private void addMessageBtn_Click(object sender, EventArgs e)
+        {
+            msgs.Add(messageTextBox.Text);
+            messageTextBox.Text = "";
+            messageTextBox.Focus();
         }
     }
 }

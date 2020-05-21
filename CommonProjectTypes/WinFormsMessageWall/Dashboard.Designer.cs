@@ -77,6 +77,7 @@
             this.addMessageBtn.TabIndex = 3;
             this.addMessageBtn.Text = "Add";
             this.addMessageBtn.UseVisualStyleBackColor = true;
+            this.addMessageBtn.Click += new System.EventHandler(this.addMessageBtn_Click);
             // 
             // Dashboard
             // 
