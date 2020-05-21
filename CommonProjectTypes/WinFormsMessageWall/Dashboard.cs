@@ -28,8 +28,16 @@ namespace WinFormsMessageWall
 
         private void addMessageBtn_Click(object sender, EventArgs e)
         {
-            msgs.Add(messageTextBox.Text);
-            messageTextBox.Text = "";
+            if (string.IsNullOrWhiteSpace(messageTextBox.Text))
+            {
+                MessageBox.Show("No Entry", "Blank Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                msgs.Add(messageTextBox.Text);
+                messageTextBox.Text = "";
+            }
+
             messageTextBox.Focus();
         }
     }

@@ -58,7 +58,8 @@
             this.messageListBox.Location = new System.Drawing.Point(21, 113);
             this.messageListBox.Name = "messageListBox";
             this.messageListBox.Size = new System.Drawing.Size(441, 381);
-            this.messageListBox.TabIndex = 2;
+            this.messageListBox.TabIndex = 3;
+            this.messageListBox.TabStop = false;
             // 
             // messageListBoxLabel
             // 
@@ -74,7 +75,7 @@
             this.addMessageBtn.Location = new System.Drawing.Point(485, 11);
             this.addMessageBtn.Name = "addMessageBtn";
             this.addMessageBtn.Size = new System.Drawing.Size(68, 35);
-            this.addMessageBtn.TabIndex = 3;
+            this.addMessageBtn.TabIndex = 2;
             this.addMessageBtn.Text = "Add";
             this.addMessageBtn.UseVisualStyleBackColor = true;
             this.addMessageBtn.Click += new System.EventHandler(this.addMessageBtn_Click);
