@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestMiniProject.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsMessageWall", "WinFormsMessageWall\WinFormsMessageWall.csproj", "{C6F106F6-A901-4CDC-BAE3-33FF9A383996}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormMiniProject", "WinFormMiniProject\WinFormMiniProject.csproj", "{F4FA99FB-3F7A-476D-9CF1-62FF8AF7D3F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormMiniProjectLibrary", "WinFormMiniProjectLibrary\WinFormMiniProjectLibrary.csproj", "{4B398C6F-4F9D-4317-B73D-880AA3C7C8D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{C6F106F6-A901-4CDC-BAE3-33FF9A383996}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6F106F6-A901-4CDC-BAE3-33FF9A383996}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6F106F6-A901-4CDC-BAE3-33FF9A383996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4FA99FB-3F7A-476D-9CF1-62FF8AF7D3F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4FA99FB-3F7A-476D-9CF1-62FF8AF7D3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4FA99FB-3F7A-476D-9CF1-62FF8AF7D3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4FA99FB-3F7A-476D-9CF1-62FF8AF7D3F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B398C6F-4F9D-4317-B73D-880AA3C7C8D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B398C6F-4F9D-4317-B73D-880AA3C7C8D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B398C6F-4F9D-4317-B73D-880AA3C7C8D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B398C6F-4F9D-4317-B73D-880AA3C7C8D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

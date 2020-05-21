@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinFormMiniProject
 {
-    public partial class Form1 : Form
+    public partial class PersonEntry : Form
     {
-        public Form1()
+        public PersonEntry()
         {
             InitializeComponent();
         }
