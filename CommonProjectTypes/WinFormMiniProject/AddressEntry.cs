@@ -23,19 +23,55 @@ namespace WinFormMiniProject
 
         private void saveBtn_Click(object sender, EventArgs e)
         {
-            AddressModel address = new AddressModel
-            {
-                StreetAddress = streetAddressTextBox.Text,
-                City = cityTextBox.Text,
-                State = stateTextBox.Text,
-                ZipCode = zipCodeTextBox.Text
-            };
+            bool valid = InfoCheck();
 
-            _parent.SaveAddress(address);
-            
-            PersonEntry entry = new PersonEntry();
-            entry.Show();
-            this.Close();
+            if (!valid)
+            {
+                AddressModel address = new AddressModel
+                {
+                    StreetAddress = streetAddressTextBox.Text,
+                    City = cityTextBox.Text,
+                    State = stateTextBox.Text,
+                    ZipCode = zipCodeTextBox.Text
+                };
+
+                _parent.SaveAddress(address);
+
+                //PersonEntry entry = new PersonEntry();
+                //entry.Show();
+                this.Close();
+            }
+        }
+
+        private bool InfoCheck()
+        {
+            bool x = true;
+
+            if (string.IsNullOrWhiteSpace(streetAddressTextBox.Text))
+            {
+                MessageBox.Show("No Entry", "Blank Message StreetAddress", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return x;
+            }
+            else if (string.IsNullOrWhiteSpace(cityTextBox.Text))
+            {
+                MessageBox.Show("No Entry", "Blank Message City", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return x;
+            }
+            else if (string.IsNullOrWhiteSpace(stateTextBox.Text))
+            {
+                MessageBox.Show("No Entry", "Blank Message State", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return x;
+            }
+            else if (string.IsNullOrWhiteSpace(zipCodeTextBox.Text))
+            {
+                MessageBox.Show("No Entry", "Blank Message ZipCode", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return x;
+            }
+            else
+            {
+                x = false;
+                return x;
+            }
         }
     }
 }

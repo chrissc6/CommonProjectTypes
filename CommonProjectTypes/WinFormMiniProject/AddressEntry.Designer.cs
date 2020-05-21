@@ -142,6 +142,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
             this.Name = "AddressEntry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Address Entry Form";
             this.ResumeLayout(false);
             this.PerformLayout();

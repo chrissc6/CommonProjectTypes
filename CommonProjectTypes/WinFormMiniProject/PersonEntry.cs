@@ -30,7 +30,7 @@ namespace WinFormMiniProject
             AddressEntry entry = new AddressEntry(this);
 
             entry.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         public void AddNewAddressComplete(AddressModel am)
