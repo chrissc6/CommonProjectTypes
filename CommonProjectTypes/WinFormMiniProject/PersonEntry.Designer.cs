@@ -128,6 +128,7 @@
             this.saveBtn.TabIndex = 5;
             this.saveBtn.Text = "Save";
             this.saveBtn.UseVisualStyleBackColor = true;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // personEntryLabel
             // 

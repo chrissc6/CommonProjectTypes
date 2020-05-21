@@ -32,7 +32,9 @@ namespace WinFormMiniProject
             };
 
             _parent.SaveAddress(address);
-
+            
+            PersonEntry entry = new PersonEntry();
+            entry.Show();
             this.Close();
         }
     }

@@ -30,6 +30,7 @@ namespace WinFormMiniProject
             AddressEntry entry = new AddressEntry(this);
 
             entry.Show();
+            this.Hide();
         }
 
         public void AddNewAddressComplete(AddressModel am)
@@ -40,6 +41,17 @@ namespace WinFormMiniProject
         public void SaveAddress(AddressModel address)
         {
             addresses.Add(address);
+        }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+            PersonModel person = new PersonModel
+            {
+                FirstName = firstNameTextBox.Text,
+                LastName = lastNameTextBox.Text,
+                IsActive = isActiveCheckBox.Checked,
+                Addresses = addresses.ToList()
+            };
         }
     }
 }
