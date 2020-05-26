@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,19 @@ namespace WPFCoreMessageWall
     /// </summary>
     public partial class MainWindow : Window
     {
+        BindingList<string> msgs = new BindingList<string>();
+
         public MainWindow()
         {
             InitializeComponent();
+
+            messageList.ItemsSource = msgs;
+        }
+
+        private void addMessageText_Click(object sender, RoutedEventArgs e)
+        {
+            msgs.Add(messageText.Text);
+            messageText.Text = "";
         }
     }
 }
