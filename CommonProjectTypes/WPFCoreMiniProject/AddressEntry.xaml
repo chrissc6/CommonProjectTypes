@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCoreMiniProject"
         mc:Ignorable="d" FontSize="22"
-        Title="AddressEntry" Height="450" Width="800">
+        Title="Address Entry" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>

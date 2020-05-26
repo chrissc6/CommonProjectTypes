@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCoreMiniProject"
         mc:Ignorable="d" FontSize="22"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Person Entry" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -15,6 +15,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
@@ -23,27 +24,30 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        
+
         <!--Comment-->
 
-        <TextBlock Grid.Row="0" Grid.Column="1" Margin="0 20 5 0">First Name:</TextBlock>
-        <TextBox x:Name="firstNameTextBox" Grid.Row="0" Grid.Column="2" 
+        <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+                   FontSize="36" HorizontalAlignment="Center">Person Entry</TextBlock>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Margin="0 20 5 0">First Name:</TextBlock>
+        <TextBox x:Name="firstNameTextBox" Grid.Row="1" Grid.Column="2" 
                  MinWidth="200" MaxWidth="300" Margin="0 20 0 0"/>
 
-        <TextBlock Grid.Row="1" Grid.Column="1" Margin="0 10 5 0">Last Name:</TextBlock>
-        <TextBox x:Name="lastNameTextBox" Grid.Row="1" Grid.Column="2" 
+        <TextBlock Grid.Row="2" Grid.Column="1" Margin="0 10 5 0">Last Name:</TextBlock>
+        <TextBox x:Name="lastNameTextBox" Grid.Row="2" Grid.Column="2" 
                  MinWidth="200" MaxWidth="300" Margin="0 10 0 0"/>
 
         <!--You can use HorizontalAlignment="Right" to right align the text-->
-        <TextBlock Grid.Row="2" Grid.Column="1" Margin="0 10 5 0">Active:</TextBlock>
-        <CheckBox x:Name="activeCheckBox" Grid.Row="2" Grid.Column="2"
+        <TextBlock Grid.Row="3" Grid.Column="1" Margin="0 10 5 0">Active:</TextBlock>
+        <CheckBox x:Name="activeCheckBox" Grid.Row="3" Grid.Column="2"
                   Margin="0 20 0 10" VerticalAlignment="Center"/>
 
-        <TextBlock Grid.Row="3" Grid.Column="1" Margin="0 10 5 0">Addresses:</TextBlock>
-        <Button x:Name="addAddressButton" Grid.Row="3" Grid.Column="2" 
+        <TextBlock Grid.Row="4" Grid.Column="1" Margin="0 10 5 0">Addresses:</TextBlock>
+        <Button x:Name="addAddressButton" Grid.Row="4" Grid.Column="2" 
                 Width="50" HorizontalAlignment="Right" Margin="0 10 0 0" Click="addAddressButton_Click">Add</Button>
 
-        <ListBox x:Name="addressesListBox" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="0 5 0 0">
+        <ListBox x:Name="addressesListBox" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="0 5 0 0">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
@@ -60,7 +64,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
 
-        <Button x:Name="savePerson" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+        <Button x:Name="savePerson" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2"
                 Width="55" Height="35" Margin="0 20" Padding="0 0 0 0" Click="savePerson_Click">Save</Button>
     </Grid>
 </Window>
