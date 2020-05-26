@@ -27,6 +27,17 @@ namespace WPFCoreMiniProject
         public MainWindow()
         {
             InitializeComponent();
+
+            addressesListBox.ItemsSource = addresses;
+
+            ////test address
+            //addresses.Add(new AddressModel
+            //{
+            //    StreetAddress = "123 Test St.",
+            //    City = "Cincinnati",
+            //    State = "OH",
+            //    ZipCode = "12345"
+            //});
         }
     }
 }
