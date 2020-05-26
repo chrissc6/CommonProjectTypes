@@ -4,9 +4,28 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFCoreMessageWall"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" FontSize="22"
+        Title="Message Wall" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="auto"/>
+            <RowDefinition  Height="auto"/>
+            <RowDefinition  Height="auto"/>
+            <RowDefinition  Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
+            <TextBlock>Message:</TextBlock>
+            <TextBox x:Name="messageText" MinWidth="200" MaxWidth="300"/>
+            
+        </StackPanel>
+
+        <Button x:Name="addMessageText" Grid.Column="1" Grid.Row="1">Add Message</Button>
+        
     </Grid>
 </Window>
