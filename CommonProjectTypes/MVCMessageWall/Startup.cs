@@ -25,7 +25,7 @@ namespace MVCMessageWall
         {
             //enables mvc
             services.AddControllersWithViews();
-            services.AddMvc();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +53,6 @@ namespace MVCMessageWall
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
                 endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
