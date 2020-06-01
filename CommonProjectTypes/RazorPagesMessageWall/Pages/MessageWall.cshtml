@@ -1,0 +1,15 @@
+﻿@page
+@model RazorPagesMessageWall.Pages.MessageWallModel
+@{
+    ViewData["Title"] = "MessageWall";
+}
+
+<h1>MessageWall</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label asp-for="Message"/>
+        <input asp-for="Message" type="text" placeholder="Type your message..."/>
+        <button type="submit" class="btn-primary">Submit</button>
+    </div>
+</form>
