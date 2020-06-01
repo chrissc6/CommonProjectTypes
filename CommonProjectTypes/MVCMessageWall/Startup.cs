@@ -25,11 +25,14 @@ namespace MVCMessageWall
         {
             //enables mvc
             services.AddControllersWithViews();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseRouting();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -42,6 +45,7 @@ namespace MVCMessageWall
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseAuthentication();
 
             app.UseRouting();
 
@@ -49,6 +53,8 @@ namespace MVCMessageWall
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllers();
+                endpoints.MapRazorPages();
                 endpoints.MapControllerRoute(
                     name: "default",
                     //controller - "code behind", action - main entry point "getter" for page
