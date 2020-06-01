@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RazorPagesMiniProject", "Ra
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCMessageWall", "MVCMessageWall\MVCMessageWall.csproj", "{FC294489-AE25-4CDA-8BBB-DCE07E307AFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCMiniProject", "MVCMiniProject\MVCMiniProject.csproj", "{1480F420-90EC-4BD6-B490-A3E096263160}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{FC294489-AE25-4CDA-8BBB-DCE07E307AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC294489-AE25-4CDA-8BBB-DCE07E307AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC294489-AE25-4CDA-8BBB-DCE07E307AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1480F420-90EC-4BD6-B490-A3E096263160}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1480F420-90EC-4BD6-B490-A3E096263160}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1480F420-90EC-4BD6-B490-A3E096263160}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1480F420-90EC-4BD6-B490-A3E096263160}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
