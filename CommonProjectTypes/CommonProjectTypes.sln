@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCMessageWall", "MVCMessag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCMiniProject", "MVCMiniProject\MVCMiniProject.csproj", "{1480F420-90EC-4BD6-B490-A3E096263160}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIMessageWall", "APIMessageWall\APIMessageWall.csproj", "{50B41DC1-7631-47A8-976B-F94994199067}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{1480F420-90EC-4BD6-B490-A3E096263160}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1480F420-90EC-4BD6-B490-A3E096263160}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1480F420-90EC-4BD6-B490-A3E096263160}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B41DC1-7631-47A8-976B-F94994199067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B41DC1-7631-47A8-976B-F94994199067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B41DC1-7631-47A8-976B-F94994199067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B41DC1-7631-47A8-976B-F94994199067}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
