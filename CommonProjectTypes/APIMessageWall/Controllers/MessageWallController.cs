@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using APIMessageWall.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -21,9 +22,9 @@ namespace APIMessageWall.Controllers
             _logger = logger;
         }
 
-        // GET: api/<MessageWallController>
+        // GET: api/MessageWall?message=test&id=1
         [HttpGet]
-        public IEnumerable<string> Get(string message = "")
+        public IEnumerable<string> Get(string message = "", int id = 0)
         {
             List<string> output = new List<string>
             {
@@ -48,9 +49,9 @@ namespace APIMessageWall.Controllers
 
         // POST api/<MessageWallController>
         [HttpPost]
-        public void Post([FromBody] string msg)
+        public void Post([FromBody] MessageModel msg)
         {
-            _logger.LogInformation($"Message was {msg}");
+            _logger.LogInformation($"Message was {msg.Message}");
         }
 
         // PUT api/<MessageWallController>/5
