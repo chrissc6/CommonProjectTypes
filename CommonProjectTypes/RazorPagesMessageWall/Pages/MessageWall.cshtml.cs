@@ -13,13 +13,19 @@ namespace RazorPagesMessageWall.Pages
         [BindProperty]
         public string Message { get; set; }
 
+        [BindProperty]
+        public List<string> Messages { get; set; } = new List<string>();
+
         public void OnGet()
         {
 
         }
 
+        //used with form method="post"
         public IActionResult OnPost()
         {
+            Messages.Add(Message);
+
             //will return the same page
             return Page();
         }
