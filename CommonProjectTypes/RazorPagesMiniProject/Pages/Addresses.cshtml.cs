@@ -11,7 +11,7 @@ namespace RazorPagesMiniProject.Pages
     public class AddressesModel : PageModel
     {
         [BindProperty]
-        public AddressesModel Address { get; set; }
+        public AddressModel Address { get; set; }
 
         public void OnGet()
         {
