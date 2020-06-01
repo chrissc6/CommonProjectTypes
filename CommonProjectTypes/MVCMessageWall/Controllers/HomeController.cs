@@ -18,6 +18,8 @@ namespace MVCMessageWall.Controllers
             _logger = logger;
         }
 
+        //action
+        //route = home/index
         public IActionResult Index()
         {
             return View();
@@ -35,3 +37,9 @@ namespace MVCMessageWall.Controllers
         }
     }
 }
+
+/// <summary>
+/// a controller has actions, and each action corresponds to a view
+/// 
+/// </summary>
+/// <returns></returns>
