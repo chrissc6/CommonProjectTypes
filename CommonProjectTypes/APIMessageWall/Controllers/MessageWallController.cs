@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,11 +13,30 @@ namespace APIMessageWall.Controllers
     [ApiController]
     public class MessageWallController : ControllerBase
     {
+        //private ILogger<MessageWallController> _logger;
+        private ILogger _logger;
+
+        public MessageWallController(ILogger<MessageWallController> logger)
+        {
+            _logger = logger;
+        }
+
         // GET: api/<MessageWallController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<string> Get(string message = "")
         {
-            return new string[] { "value1", "value2" };
+            List<string> output = new List<string>
+            {
+                "Hello World",
+                "Another String"
+            };
+
+            if (string.IsNullOrWhiteSpace(message) == false)
+            {
+                output.Add(message);
+            }
+
+            return output;
         }
 
         // GET api/<MessageWallController>/5
@@ -28,8 +48,9 @@ namespace APIMessageWall.Controllers
 
         // POST api/<MessageWallController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] string msg)
         {
+            _logger.LogInformation($"Message was {msg}");
         }
 
         // PUT api/<MessageWallController>/5
