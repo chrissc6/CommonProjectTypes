@@ -7,21 +7,21 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MVCMiniProject.Controllers
 {
-    public class PersonController : Controller
+    public class AddressController : Controller
     {
-        // GET: PersonController
+        // GET: AddressController
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET: PersonController/Create
+        // GET: AddressController/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: PersonController/Create
+        // POST: AddressController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(IFormCollection collection)
